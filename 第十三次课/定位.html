@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: green;
+        }
+        .wrapper{
+            background-color: blueviolet;
+            width: 800px;
+            height: 500px;
+            margin: 50px;
+            margin-left: 200px;
+            /* border: 1px solid pink; */
+            overflow:hidden
+            /* 或者用上面的使得子级的margin生效 */
+        }
+        .grandparents{
+            background-color: cadetblue;
+            width: 600px;
+            height: 400px;
+            margin: 20px;
+            /* 当父div无border设置  margin无法显示  会直接被父级吸走 */
+        }
+        .parent1{
+            background-color: saddlebrown;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 10px;
+            /* position: absolute; */
+        }
+        .parent2{
+            background-color: springgreen;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .son1{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            position: absolute;/*绝对定位:要先看父类的定位 
+                                若是默认的static则无变化，若有则根据父类进行转变*/
+            top: 15px;
+        }
+        .son2{
+            background-color:black  ;
+            width: 30px;
+            height: 30px;
+            position: relative;/*相对定位*/
+            top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper"><!--div为行内块级元素-->
+        <div class="grandparents">
+            <div class="parent1">
+                <div class="son1"></div>
+            </div>
+            <div class="parent2">
+                <div class="son2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

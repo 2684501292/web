@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           background-color: green; 
+        }
+        .main{
+            background-color:/* yellow*/radial-gradient(circle at 10px 10px,rgb(212,207,179),black);;
+            /*分别代表用的red green blue的多少，后面可加透明度 rgba然后加参数*/
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            border-radius: 50%;/*圆*/
+            position: absolute;
+            left:50%;/*如果想要left生效  position必须是absolute 或者relative*/
+            top:50%;/*相对于背景*/
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+</body>
+</html>
